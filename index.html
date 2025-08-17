@@ -67,20 +67,15 @@
 
 </head>
 
-<body class="bg-white text-black mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
+<body class="bg-white text-black mt-0 overflow-x-hidden" data-bs-spy="scroll" data-bs-target="#navScroll">
 
 <nav id="navScroll" class="navbar navbar-light fixed-top px-md-5" tabindex="0">
-    <div class="container-fluid">
+    <div class="container-fluid mx-md-5 justify-content-center justify-content-md-between text-center">
             <a class="navbar-brand fs-4 col-12 col-md-auto text-center" href="#">
                 <img src="images/uruz.png" width="30" height="24" class="d-inline-block align-baseline" alt="">
                 <span class="ms-md-1 mt-1 fw-bolder me-md-5">MOVE UNBOUND</span>
             </a>
         <ul class="navbar-nav mb-2 flex-row">
-            <li class="nav-item">
-                <a class="nav-link fs-5" href="#home" aria-label="Homepage">
-                    Home
-                </a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link fs-5" href="#about" aria-label="A sample content page">
                     About
@@ -347,7 +342,7 @@
 <script>
     let scrollpos = window.scrollY
     const header = document.querySelector(".navbar")
-    const header_height = header.offsetHeight
+    const header_height = 10
 
     const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
     const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
@@ -359,6 +354,7 @@
         else { remove_class_on_scroll() }
 
         console.log(scrollpos)
+        console.log(header_height)
     })
 </script>
 
